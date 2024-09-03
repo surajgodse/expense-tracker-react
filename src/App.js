@@ -10,6 +10,7 @@ import SignUp from './components/SignUp';
 import ForgotPassword from './components/ForgotPassword';
 import ChangePassword from './components/ChangePassword';
 import Dashboard from './components/Dashboard';
+import GuestDashboard from './components/GuestDashboard'; // New import
 import './App.css';
 
 const darkTheme = createTheme({
@@ -41,6 +42,7 @@ function App() {
               <Route path="/change-password" element={<PrivateRoute><ChangePassword /></PrivateRoute>} />
               <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
               <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+              <Route path="/guest-dashboard" element={<GuestDashboard />} /> // New route
               <Route path="/" element={<Navigate to="/login" />} />
             </Routes>
           </main>

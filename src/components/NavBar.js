@@ -1,5 +1,4 @@
 import React from 'react';
-import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Button } from '@mui/material';
 
@@ -12,13 +11,13 @@ function NavBar() {
     navigate('/login');
   };
 
-
   return (
     <AppBar position="static">
       <Toolbar>
         <Typography variant="h6" style={{ flexGrow: 1 }}>
           Expense Tracker
         </Typography>
+        <Button color="inherit" component={Link} to="/guest-dashboard">Guest Dashboard</Button>
         {un ? (
           <>
             <Button color="inherit" component={Link} to="/dashboard">Dashboard</Button>
